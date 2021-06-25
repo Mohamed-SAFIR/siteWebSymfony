@@ -1,3 +1,3 @@
 # siteWebSymfony
 
-![alt text](http://url/to/img.png)
+![stack Overflow](http://lmsotfy.com/so.png)
