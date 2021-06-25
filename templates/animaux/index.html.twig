@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Animaux{% endblock %}
+
+{% block body %}
+
+
+<div class="main">
+
+  <section class="py-5 text-center container">
+<h1>Tout savoir sur l'univers des animaux</h1>
+
+</section>
+
+<div class="album py-5 bg-light">
+<div class="container">
+
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    {% for an in animaux %}
+        <div class="col">
+        <div class="card shadow-sm">
+            <img src="{{an.image}}" alt="{{an.image}}" width="400" height="250"/>
+            <div class="card-body">
+            <h1> {{an.name | slice (0 , 15)}}...</h1>
+            <p class="card-text">{{an.description | slice (0 , 60)}}... </p>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary" >
+                    <a href="{{path('animal', {'id': an.id})}}">
+                        Voir plus
+                    </a>
+                </button>
+                    
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    {% endfor %}
+    </div>
+    </div>
+    </div>
+
+</div>
+
+{% endblock %}
+
+

@@ -1,0 +1,131 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}DELTA{% endblock %}
+
+{% block body %}
+<style>
+    .main { margin-bottom : 100px}
+</style>
+
+<div class="main">
+    <div class="container">
+        <h1 class="text-center">Accueil</h1>
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Dogue_de_Bordeaux.jpg" width="1500" height="400" />
+
+                    <div class="container">
+                        <div class="carousel-caption ">
+                            <h1>Chiens</h1>
+                            <p><a class="btn btn-lg btn-primary" href="{{ path("animaux")}}">voir plus</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="bd-placeholder-img" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Chat_mi-long.jpg"   width="1500" height="400" />
+
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1> Chats</h1>
+                            <p><a class="btn btn-lg btn-primary" href="{{ path("animaux")}}">Voir plus</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="bd-placeholder-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Jabir%C3%BA_africano_%28Ephippiorhynchus_senegalensis%29%2C_delta_del_Okavango%2C_Botsuana%2C_2018-07-31%2C_DD_11.jpg/2560px-Jabir%C3%BA_africano_%28Ephippiorhynchus_senegalensis%29%2C_delta_del_Okavango%2C_Botsuana%2C_2018-07-31%2C_DD_11.jpg"  width="1500" height="400" />
+                    <div class="container">
+                        <div class="carousel-caption ">
+                            <h1>Oiseaux</h1>
+                            <p><a class="btn btn-lg btn-primary" href="{{ path("animaux")}}">Voir plus</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+<hr>
+    
+        <div class="container">
+            <div class="row">
+                    <div class="col-sm-2 align-self-center">
+
+                            <a class="btn btn-primary" href="{{ path("register_don") }}">Faire un don</a>
+
+                    </div>
+
+                 <div class="col align-self-start">
+                    <h2 class="text-center">Faire un don</h2>
+                    <h4 >Les animaux sont confrontés chaque jour à des problèmes de plus en plus importants et de plus en plus complexes. Plus de criminalité liée à la faune sauvage et de trafic en ligne. Plus de pollution sonore des océans. Plus de tempêtes violentes. Des milliers d’éléphants sont tués chaque année pour leur ivoire. De très nombreux chiens et chats ne bénéficient pas des soins vétérinaires de base et d’un abri. Nous sommes convaincus que chaque individu compte. </h4>
+                    <h4>Avec votre aide, DELTA est sur le terrain en Afrique, en Asie et dans le monde entier pour protéger les animaux en danger, comme les éléphants, les koalas, les tigres et tant d’autres, face aux braconniers et au commerce illégal de faune sauvage. Nous sommes en mer pour secourir les dauphins, les baleines, les phoques et les autres animaux marins victimes d’enchevêtrement et d’autres dangers issus de la pêche commerciale. Votre soutien sauvera des animaux et fera du monde un endroit meilleur où nous cohabiterons tous harmonieusement. </h4>
+
+             </div>
+            
+          </div>
+                
+        </div>
+
+<hr>
+        <div id="myCarousel1" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://nosamisleschiens.fr/wp-content/uploads/2012/11/Accesoires-pour-chiens.jpeg" width="1400" height="400" />
+
+                <div class="container">
+                    <div class="carousel-caption ">
+                        <h1>Articles</h1>
+                        <p><a class="btn btn-lg btn-primary" href="{{ path("articles")}}">voir plus</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="bd-placeholder-img" src="https://i.pinimg.com/736x/35/2f/c5/352fc5e93707e038eb77e9ea6566d4c9.jpg"   width="1500" height="400" />
+
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1> Articles</h1>
+                        <p><a class="btn btn-lg btn-primary" href="{{ path("articles")}}">Voir plus</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="bd-placeholder-img" src="https://gardenforum.be/wp-content/uploads/ueberunswerte9.jpg"  width="1500" height="400" />
+                <div class="container">
+                    <div class="carousel-caption ">
+                        <h1>Articles</h1>
+                        <p><a class="btn btn-lg btn-primary" href="{{ path("articles")}}">Voir plus</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel1" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel1" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    </div>
+</div>
+
+{% endblock %}

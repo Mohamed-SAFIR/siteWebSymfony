@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Panier{% endblock %}
+
+{% block body %}
+
+<div class="main">
+    <div class="container">
+    <h1>Mon panier</h1>
+    <h2 class="text-center">Mon panier articles</h2>
+        {% if articles | length > 0 %}
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Article</th>
+                        <th>Prix</th>
+                        <th>Quantité</th>
+                        <th>Total</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in articles %}
+                         <tr>
+                             <td>{{ item.article.name }}</td>
+                             <td>{{ item.article.price }}</td>
+                             <td>{{ item.quantity }}</td>
+                             <td>{{ item.article.price * item.quantity }}</td>
+                            <td>
+                                <a href="{{ path('panier_remove_article', {'id': item.article.id})}}" class="btn btn-danger btn-sm">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </td>
+                         </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Total : </td>
+                        <td>{{ total }}</td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        {% else %}
+            <p>Surpirse, c'est vide !</p>
+        {% endif %}
+
+<hr>
+    <h2 class="text-center">Mon panier animaux</h2>
+        {% if animaux | length > 0 %}
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Type</th>
+                        <th>Poids</th>
+                        <th>Taille</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in animaux %}
+                         <tr>
+                             <td>{{ item.animal.name }}</td>
+                             <td>{{ item.animal.type }}</td>
+                             <td>{{ item.animal.poids }}</td>
+                             <td>{{ item.animal.taille }}</td>
+                            <td>
+                                <a href="{{ path('panier_remove_animal', {'id': item.animal.id})}}" class="btn btn-danger btn-sm">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </td>
+                         </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>Surpirse, c'est vide !</p>
+        {% endif %}
+    </div>
+</div>
+
+
+{% endblock %}

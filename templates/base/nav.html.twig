@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{{'/'}}">DELTA</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{'/'}}">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ '/animaux' }}">Animaux</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ '/article' }}" >Articles</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ '/registerBanq' }}" >Faire un don</a>
+        </li>
+      </ul>
+
+        {% if is_granted("ROLE_USER") %}
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li  class="nav-item">
+                <a class="nav-link active" href="{{ '/panier' }}" >Panier</a>
+            </li>
+            <li  class="nav-item">
+                <a class="nav-link active" href="{{ '/logout' }}">Déconnexion</a>
+            </li>
+          </ul>
+            {% else %}
+            <ul class="navbar-nav mb-2 mb-lg-0">
+            <li  class="nav-item">
+                <a class="nav-link active" href="{{ '/connexion' }}" >Connexion</a>
+            </li>
+            <li  class="nav-item">
+                <a class="nav-link active" href="{{ '/inscription' }}">Inscription</a>
+            </li>
+         </ul>
+        {% endif %}
+      
+        
+    </div>
+  </div>
+</nav>
